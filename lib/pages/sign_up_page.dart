@@ -8,8 +8,11 @@ class SignUpPage extends StatefulWidget {
   State<SignUpPage> createState() => _SignUpPageState();
 }
 
+const List<String> list = <String>['Pengguna', 'Terapis'];
+
 class _SignUpPageState extends State<SignUpPage> {
   var _isObscured;
+  String dropdownValue = list.first;
 
   @override
   void initState() {
@@ -44,7 +47,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 SizedBox(height: 30.0),
                 Text(
-                  'Email Address',
+                  'Fullname',
                 ),
                 SizedBox(
                   height: 2,
@@ -72,7 +75,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           child: TextFormField(
                             // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
-                                hintText: 'Your Email Address',
+                                hintText: 'Your Fullname',
                                 hintStyle: subtitleTextStyle),
                           ),
                         ),
@@ -82,7 +85,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 SizedBox(height: 20.0),
                 Text(
-                  'Email Address',
+                  'Username',
                 ),
                 SizedBox(
                   height: 2,
@@ -110,7 +113,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           child: TextFormField(
                             // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
-                                hintText: 'Your Email Address',
+                                hintText: 'Your Username',
                                 hintStyle: subtitleTextStyle),
                           ),
                         ),
@@ -120,7 +123,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 SizedBox(height: 20.0),
                 Text(
-                  'Email Address',
+                  'Daftar Sebagai',
                 ),
                 SizedBox(
                   height: 2,
@@ -135,24 +138,28 @@ class _SignUpPageState extends State<SignUpPage> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/icon_email.png',
-                          width: 17,
-                        ),
-                        SizedBox(
-                          width: 16,
-                        ),
-                        Expanded(
-                          child: TextFormField(
-                            // style: primaryTextStyle,
-                            decoration: InputDecoration.collapsed(
-                                hintText: 'Your Email Address',
-                                hintStyle: subtitleTextStyle),
-                          ),
-                        ),
-                      ],
+                    child: DropdownButton<String>(
+                      value: dropdownValue,
+                      icon: const Icon(Icons.arrow_drop_down),
+                      isExpanded: true,
+                      // elevation: 16,
+                      // style: const TextStyle(color: primaryColor),
+                      // underline: Container(
+                      //   height: 2,
+                      //   color: primaryColor,
+                      // ),
+                      onChanged: (String? value) {
+                        // This is called when the user selects an item.
+                        setState(() {
+                          dropdownValue = value!;
+                        });
+                      },
+                      items: list.map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
                     ),
                   ),
                 ),
