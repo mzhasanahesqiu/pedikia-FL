@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:pedikia/theme.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
+
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  var _isObscured;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _isObscured = true;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -97,10 +111,23 @@ class SignInPage extends StatelessWidget {
                         Expanded(
                           child: TextFormField(
                             // style: primaryTextStyle,
-                            obscureText: true,
-                            decoration: InputDecoration.collapsed(
-                                hintText: 'Your Password',
-                                hintStyle: subtitleTextStyle),
+                            obscureText: _isObscured,
+                            decoration: InputDecoration(
+                              suffixIcon: IconButton(
+                                padding: EdgeInsetsDirectional.only(end: 12),
+                                icon: _isObscured
+                                    ? Icon(Icons.visibility)
+                                    : Icon(Icons.visibility_off_outlined),
+                                onPressed: () {
+                                  setState(() {
+                                    _isObscured = !_isObscured;
+                                  });
+                                },
+                              ),
+                              border: InputBorder.none,
+                              hintText: 'Your Password',
+                              hintStyle: subtitleTextStyle,
+                            ),
                           ),
                         ),
                       ],

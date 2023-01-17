@@ -19,25 +19,59 @@ class SignUpPage extends StatelessWidget {
                   'Sign Up',
                   style: TextStyle(
                     fontSize: 24.0,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: bold,
                   ),
                 ),
                 SizedBox(
                   height: 2.0,
                 ),
                 Text(
-                  'Sign in to Continue',
+                  'Please fill in the form below to continue',
+                ),
+                SizedBox(height: 30.0),
+                Text(
+                  'Email Address',
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                Container(
+                  height: 50,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    color: primaryColor.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icon_email.png',
+                          width: 17,
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Expanded(
+                          child: TextFormField(
+                            // style: primaryTextStyle,
+                            decoration: InputDecoration.collapsed(
+                                hintText: 'Your Email Address',
+                                hintStyle: subtitleTextStyle),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 SizedBox(height: 20.0),
                 Text(
                   'Email Address',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: medium,
-                  ),
                 ),
                 SizedBox(
-                  height: 12,
+                  height: 2,
                 ),
                 Container(
                   height: 50,
@@ -45,7 +79,7 @@ class SignUpPage extends StatelessWidget {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: backgroundColor2,
+                    color: primaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -60,7 +94,7 @@ class SignUpPage extends StatelessWidget {
                         ),
                         Expanded(
                           child: TextFormField(
-                            style: primaryTextStyle,
+                            // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
                                 hintText: 'Your Email Address',
                                 hintStyle: subtitleTextStyle),
@@ -70,15 +104,12 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 20.0),
                 Text(
                   'Email Address',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: medium,
-                  ),
                 ),
                 SizedBox(
-                  height: 12,
+                  height: 2,
                 ),
                 Container(
                   height: 50,
@@ -86,7 +117,7 @@ class SignUpPage extends StatelessWidget {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: backgroundColor2,
+                    color: primaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -101,7 +132,7 @@ class SignUpPage extends StatelessWidget {
                         ),
                         Expanded(
                           child: TextFormField(
-                            style: primaryTextStyle,
+                            // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
                                 hintText: 'Your Email Address',
                                 hintStyle: subtitleTextStyle),
@@ -111,15 +142,12 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 20.0),
                 Text(
                   'Email Address',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: medium,
-                  ),
                 ),
                 SizedBox(
-                  height: 12,
+                  height: 2,
                 ),
                 Container(
                   height: 50,
@@ -127,7 +155,7 @@ class SignUpPage extends StatelessWidget {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: backgroundColor2,
+                    color: primaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -142,48 +170,7 @@ class SignUpPage extends StatelessWidget {
                         ),
                         Expanded(
                           child: TextFormField(
-                            style: primaryTextStyle,
-                            decoration: InputDecoration.collapsed(
-                                hintText: 'Your Email Address',
-                                hintStyle: subtitleTextStyle),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Text(
-                  'Email Address',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: medium,
-                  ),
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-                Container(
-                  height: 50,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 16,
-                  ),
-                  decoration: BoxDecoration(
-                    color: backgroundColor2,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Center(
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/icon_email.png',
-                          width: 17,
-                        ),
-                        SizedBox(
-                          width: 16,
-                        ),
-                        Expanded(
-                          child: TextFormField(
-                            style: primaryTextStyle,
+                            // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
                                 hintText: 'Your Email Address',
                                 hintStyle: subtitleTextStyle),
@@ -196,13 +183,9 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(height: 20.0),
                 Text(
                   'Password',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: medium,
-                  ),
                 ),
                 SizedBox(
-                  height: 12,
+                  height: 2,
                 ),
                 Container(
                   height: 50,
@@ -210,7 +193,7 @@ class SignUpPage extends StatelessWidget {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: backgroundColor2,
+                    color: primaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -225,7 +208,7 @@ class SignUpPage extends StatelessWidget {
                         ),
                         Expanded(
                           child: TextFormField(
-                            style: primaryTextStyle,
+                            // style: primaryTextStyle,
                             obscureText: true,
                             decoration: InputDecoration.collapsed(
                                 hintText: 'Your Password',
@@ -259,7 +242,7 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(bottom: 30),
+                  margin: EdgeInsets.only(top: 15, bottom: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
