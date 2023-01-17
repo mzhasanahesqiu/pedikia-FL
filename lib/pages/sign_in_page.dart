@@ -1,6 +1,5 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
+import 'package:pedikia/theme.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -8,230 +7,155 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(
-                    'https://images.unsplash.com/photo-1510227272981-87123e259b17?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Center(
-              child: Form(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
+            padding: EdgeInsets.symmetric(horizontal: 24.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 20.0),
+                Text(
+                  'Sign In',
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: bold,
+                  ),
+                ),
+                SizedBox(
+                  height: 2.0,
+                ),
+                Text(
+                  'Sign in to Continue',
+                ),
+                SizedBox(height: 50.0),
+                Text(
+                  'Email Address',
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Container(
+                  height: 50,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    color: primaryColor.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icon_email.png',
+                          width: 17,
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Expanded(
+                          child: TextFormField(
+                            // style: primaryTextStyle,
+                            decoration: InputDecoration.collapsed(
+                              hintText: 'Your Email Address',
+                              hintStyle: subtitleTextStyle,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Text(
+                  'Password',
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Container(
+                  height: 50,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    color: primaryColor.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/icon_password.png',
+                          width: 17,
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Expanded(
+                          child: TextFormField(
+                            // style: primaryTextStyle,
+                            obscureText: true,
+                            decoration: InputDecoration.collapsed(
+                                hintText: 'Your Password',
+                                hintStyle: subtitleTextStyle),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Container(
+                  height: 50,
+                  width: double.infinity,
+                  margin: EdgeInsets.only(top: 30),
+                  child: TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      backgroundColor: primaryColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Text(
+                      'Sign In',
+                      style: primaryTextStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: medium,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 30),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
+                    children: [
+                      Text(
+                        'Don\'t have an account? ',
+                        style: subtitleTextStyle.copyWith(
+                          fontSize: 12,
                         ),
-                        style: TextStyle(color: Colors.white),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.lock),
-                          labelText: 'Password',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                        obscureText: true,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                            color: Colors.white,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
-                        ),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                        ),
-                        child: Text(
-                          'Submit',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        onPressed: () {
-                          // handle form submission
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/sign-up');
                         },
-                      ),
+                        child: Text(
+                          'Sign Up',
+                          style: purpleTextStyle.copyWith(
+                            fontSize: 12,
+                            fontWeight: medium,
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),
-              ),
+              ],
             ),
           ),
         ),
