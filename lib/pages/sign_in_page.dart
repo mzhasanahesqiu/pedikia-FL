@@ -72,7 +72,7 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                         Expanded(
                           child: TextFormField(
-                            // style: primaryTextStyle,
+                            style: subtitleTextStyle,
                             decoration: InputDecoration.collapsed(
                               hintText: 'Masukkan Email Kamu',
                               hintStyle: subtitleTextStyle,
@@ -112,7 +112,7 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                         Expanded(
                           child: TextFormField(
-                            // style: primaryTextStyle,
+                            style: subtitleTextStyle,
                             obscureText: _isObscured,
                             decoration: InputDecoration(
                               suffixIcon: IconButton(

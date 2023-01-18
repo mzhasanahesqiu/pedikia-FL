@@ -74,7 +74,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         Expanded(
                           child: TextFormField(
-                            // style: primaryTextStyle,
+                            style: subtitleTextStyle,
                             decoration: InputDecoration.collapsed(
                                 hintText: 'Nama Lengkap Kamu',
                                 hintStyle: subtitleTextStyle),
@@ -113,7 +113,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         Expanded(
                           child: TextFormField(
-                            // style: primaryTextStyle,
+                            style: subtitleTextStyle,
                             decoration: InputDecoration.collapsed(
                                 hintText: 'Nomor Hp',
                                 hintStyle: subtitleTextStyle),
@@ -144,6 +144,10 @@ class _SignUpPageState extends State<SignUpPage> {
                       value: dropdownValue,
                       icon: const Icon(Icons.arrow_drop_down),
                       isExpanded: true,
+                      style: subtitleTextStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: medium,
+                      ),
                       // elevation: 16,
                       // style: const TextStyle(color: primaryColor),
                       // underline: Container(
@@ -194,7 +198,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         Expanded(
                           child: TextFormField(
-                            // style: primaryTextStyle,
+                            style: subtitleTextStyle,
                             decoration: InputDecoration.collapsed(
                                 hintText: 'Alamat Email Kamu',
                                 hintStyle: subtitleTextStyle),
@@ -233,7 +237,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         Expanded(
                           child: TextFormField(
-                            // style: primaryTextStyle,
+                            style: subtitleTextStyle,
                             obscureText: _isObscured,
                             decoration: InputDecoration(
                                 suffixIcon: IconButton(
