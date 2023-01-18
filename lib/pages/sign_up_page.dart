@@ -43,11 +43,11 @@ class _SignUpPageState extends State<SignUpPage> {
                   height: 2.0,
                 ),
                 Text(
-                  'Please fill in the form below to continue',
+                  'Silahkan isi form registrasi dibawah ini',
                 ),
                 SizedBox(height: 30.0),
                 Text(
-                  'Fullname',
+                  'Nama Lengkap',
                 ),
                 SizedBox(
                   height: 2,
@@ -75,7 +75,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           child: TextFormField(
                             // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
-                                hintText: 'Your Fullname',
+                                hintText: 'Nama Lengkap Kamu',
                                 hintStyle: subtitleTextStyle),
                           ),
                         ),
@@ -85,7 +85,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 SizedBox(height: 20.0),
                 Text(
-                  'Username',
+                  'No. Handphone',
                 ),
                 SizedBox(
                   height: 2,
@@ -113,7 +113,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           child: TextFormField(
                             // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
-                                hintText: 'Your Username',
+                                hintText: 'Nomor Hp',
                                 hintStyle: subtitleTextStyle),
                           ),
                         ),
@@ -165,7 +165,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 SizedBox(height: 20.0),
                 Text(
-                  'Email Address',
+                  'Alamat Email',
                 ),
                 SizedBox(
                   height: 2,
@@ -193,7 +193,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           child: TextFormField(
                             // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
-                                hintText: 'Your Email Address',
+                                hintText: 'Alamat Email Kamu',
                                 hintStyle: subtitleTextStyle),
                           ),
                         ),
@@ -244,7 +244,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   },
                                 ),
                                 border: InputBorder.none,
-                                hintText: 'Your Password',
+                                hintText: 'Password',
                                 hintStyle: subtitleTextStyle),
                           ),
                         ),
@@ -266,7 +266,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                     ),
                     child: Text(
-                      'Sign In',
+                      'Daftar',
                       style: primaryTextStyle.copyWith(
                         fontSize: 16,
                         fontWeight: medium,
@@ -280,17 +280,17 @@ class _SignUpPageState extends State<SignUpPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Don\'t have an account? ',
+                        'Sudah punya akun? ',
                         style: subtitleTextStyle.copyWith(
                           fontSize: 12,
                         ),
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/sign-up');
+                          Navigator.pop(context);
                         },
                         child: Text(
-                          'Sign Up',
+                          'Masuk',
                           style: purpleTextStyle.copyWith(
                             fontSize: 12,
                             fontWeight: medium,

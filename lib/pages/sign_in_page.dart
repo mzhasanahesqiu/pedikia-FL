@@ -41,14 +41,14 @@ class _SignInPageState extends State<SignInPage> {
                   height: 2.0,
                 ),
                 Text(
-                  'Sign in to Continue',
+                  'Silahkan Sign In terlebih dahulu',
                 ),
                 SizedBox(height: 50.0),
                 Text(
-                  'Email Address',
+                  'Alamat Email',
                 ),
                 SizedBox(
-                  height: 12,
+                  height: 2,
                 ),
                 Container(
                   height: 50,
@@ -73,7 +73,7 @@ class _SignInPageState extends State<SignInPage> {
                           child: TextFormField(
                             // style: primaryTextStyle,
                             decoration: InputDecoration.collapsed(
-                              hintText: 'Your Email Address',
+                              hintText: 'Masukkan Email Kamu',
                               hintStyle: subtitleTextStyle,
                             ),
                           ),
@@ -87,7 +87,7 @@ class _SignInPageState extends State<SignInPage> {
                   'Password',
                 ),
                 SizedBox(
-                  height: 12,
+                  height: 2,
                 ),
                 Container(
                   height: 50,
@@ -125,7 +125,7 @@ class _SignInPageState extends State<SignInPage> {
                                 },
                               ),
                               border: InputBorder.none,
-                              hintText: 'Your Password',
+                              hintText: 'Masukkan Password Kamu',
                               hintStyle: subtitleTextStyle,
                             ),
                           ),
@@ -148,7 +148,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     child: Text(
-                      'Sign In',
+                      'Masuk',
                       style: primaryTextStyle.copyWith(
                         fontSize: 16,
                         fontWeight: medium,
@@ -162,7 +162,7 @@ class _SignInPageState extends State<SignInPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Don\'t have an account? ',
+                        'Belum punya akun ? ',
                         style: subtitleTextStyle.copyWith(
                           fontSize: 12,
                         ),
@@ -172,7 +172,7 @@ class _SignInPageState extends State<SignInPage> {
                           Navigator.pushNamed(context, '/sign-up');
                         },
                         child: Text(
-                          'Sign Up',
+                          'Daftar',
                           style: purpleTextStyle.copyWith(
                             fontSize: 12,
                             fontWeight: medium,
