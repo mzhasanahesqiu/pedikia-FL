@@ -56,7 +56,7 @@ class _SignInPageState extends State<SignInPage> {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.1),
+                    color: secondaryColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -96,7 +96,7 @@ class _SignInPageState extends State<SignInPage> {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.1),
+                    color: secondaryColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -151,7 +151,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     child: Text(
                       'Masuk',
-                      style: primaryTextStyle.copyWith(
+                      style: whiteTextStyle.copyWith(
                         fontSize: 16,
                         fontWeight: medium,
                       ),
@@ -175,7 +175,7 @@ class _SignInPageState extends State<SignInPage> {
                         },
                         child: Text(
                           'Daftar',
-                          style: purpleTextStyle.copyWith(
+                          style: primaryTextStyle.copyWith(
                             fontSize: 12,
                             fontWeight: medium,
                           ),

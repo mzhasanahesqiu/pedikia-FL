@@ -58,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.1),
+                    color: secondaryColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -97,7 +97,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.1),
+                    color: secondaryColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -136,7 +136,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.1),
+                    color: secondaryColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -178,7 +178,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.1),
+                    color: secondaryColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -217,7 +217,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.1),
+                    color: secondaryColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -271,7 +271,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     child: Text(
                       'Daftar',
-                      style: primaryTextStyle.copyWith(
+                      style: whiteTextStyle.copyWith(
                         fontSize: 16,
                         fontWeight: medium,
                       ),
@@ -295,7 +295,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         },
                         child: Text(
                           'Masuk',
-                          style: purpleTextStyle.copyWith(
+                          style: primaryTextStyle.copyWith(
                             fontSize: 12,
                             fontWeight: medium,
                           ),
