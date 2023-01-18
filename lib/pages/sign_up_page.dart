@@ -64,9 +64,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: Center(
                     child: Row(
                       children: [
-                        Image.asset(
-                          'assets/icon_email.png',
-                          width: 17,
+                        Icon(
+                          Icons.face,
+                          color: primaryColor,
+                          size: 20,
                         ),
                         SizedBox(
                           width: 16,
@@ -102,9 +103,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: Center(
                     child: Row(
                       children: [
-                        Image.asset(
-                          'assets/icon_email.png',
-                          width: 17,
+                        Icon(
+                          Icons.smartphone,
+                          color: primaryColor,
+                          size: 20,
                         ),
                         SizedBox(
                           width: 16,
@@ -182,9 +184,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: Center(
                     child: Row(
                       children: [
-                        Image.asset(
-                          'assets/icon_email.png',
-                          width: 17,
+                        Icon(
+                          Icons.email,
+                          color: primaryColor,
+                          size: 20,
                         ),
                         SizedBox(
                           width: 16,
@@ -220,9 +223,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: Center(
                     child: Row(
                       children: [
-                        Image.asset(
-                          'assets/icon_password.png',
-                          width: 17,
+                        Icon(
+                          Icons.lock,
+                          color: primaryColor,
+                          size: 20,
                         ),
                         SizedBox(
                           width: 16,
