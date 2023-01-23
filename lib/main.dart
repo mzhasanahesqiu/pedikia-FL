@@ -1,3 +1,4 @@
+import 'package:pedikia/pages//views/reservation_maps.dart';
 import 'package:flutter/material.dart';
 import 'package:pedikia/pages/sign_in_page.dart';
 import 'package:pedikia/pages/sign_up_page.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashPage(),
         '/sign-in': (context) => SignInPage(),
         '/sign-up': (context) => SignUpPage(),
+        '/home': (context) => HomePage()
       },
     );
   }
